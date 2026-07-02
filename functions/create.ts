@@ -16,58 +16,58 @@ export const onRequestPost: PagesFunction<{
     if (!body.description || !body.image || !body.redirect || !body.title) {
       return createResponse(
         {
-          message: "Вы должны указать 'description', 'image', 'title' и 'redirect'",
+          message: "Anda harus mengisi 'description', 'image', 'title' и 'redirect'",
         },
         422
       )
     }
 
     if (!isURL(body.redirect)) {
-      return createResponse({ message: 'URL-адрес недействителен' }, 422)
+      return createResponse({ message: 'URL-tujuan tidak valid' }, 422)
     }
 
     if (body.redirect.length > 250) {
       return createResponse(
-        { message: 'Длина URL-адреса для переадрессации должна быть меньше или равна 250' },
+        { message: 'Panjang URL redirect harus kurang dari atau sama dengan 250 karakter' },
         422
       )
     }
 
     /*
      * '👨‍👨‍👧‍👧'.length --> 11
-     * Подумать, что делать с Unicode символами
+     * Perlu dipertimbangkan cara menangani karakter Unicode
      */
     if (body.title.length > 70) {
       return createResponse(
-        { message: 'Длина заголовка должна быть меньше или равна 70' },
+        { message: 'Panjang judul harus kurang dari atau sama dengan 70 karakter' },
         422
       )
     }
 
     if (body.description.length > 150) {
       return createResponse(
-        { message: 'Длина описания должна быть меньше или равна 150' },
+        { message: 'Panjang deskripsi harus kurang dari atau sama dengan 150 karakter' },
         422
       )
     }
 
     if (body.image.startsWith('data:')) {
       return createResponse(
-        { message: 'Запрещено использовать data:image' },
+        { message: 'Penggunaan data:image tidak diperbolehkan' },
         422
       )
     }
 
     if (!isURL(body.image)) {
       return createResponse(
-        { message: 'URL-адрес картинки недействителен' },
+        { message: 'URL gambar tidak valid' },
         422
       )
     }
 
     if (body.image.length > 200) {
       return createResponse(
-        { message: 'Длина URL-адреса картинки должна быть меньше или равна 200' },
+        { message: 'Panjang URL gambar harus kurang dari atau sama dengan 200 karakter' },
         422
       )
     }
