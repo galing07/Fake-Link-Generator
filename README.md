@@ -1,10 +1,16 @@
-# Link to - фейковые превью ссылок в соцсетях и мессенджерах
+Link to - Pratinjau Tautan Palsu di Media Sosial dan Aplikasi Pesan
+Tujuan
 
-## Назначение
+Proyek ini dibuat untuk tujuan hiburan. Anda dapat mengirimkan sebuah tautan kepada teman Anda yang seolah-olah mengarah ke situs "Anak Kucing Lucu", tetapi saat tautan tersebut dibuka, mereka akan diarahkan ke sesuatu yang jauh lebih menarik. 😉
 
-Назначением прокета является развлечение: можно отправить вашему другу ссылку, якобы ведущую на сайт "Милых котят", но вместо них он получит что-то более интересное 😉
+Cara Kerja
 
-## Принцип работы
+Saat server menerima permintaan HTTP, server akan memeriksa nilai User-Agent.
 
-При осуществлении http-запроса на сервер производится проверка [User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent). В случае, если User-Agent похож на бота, который будет искать на странице [Open Graph метатеги](https://en.wikipedia.org/wiki/Meta_element), из которых он получит заголовок, описание, и картинку-превью, то ему будет отправлена страница с этими метатегами, в противном случае будет отправлен http-ответ с заголовком [Location](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Location), тем самым производя переадрессацию на требуемый адрес.
+Jika User-Agent terdeteksi sebagai bot (misalnya bot dari media sosial atau aplikasi pesan) yang bertugas mengambil metadata Open Graph dari sebuah halaman web—seperti judul, deskripsi, dan gambar pratinjau—maka server akan mengirimkan halaman yang berisi metadata Open Graph tersebut.
 
+Namun, jika User-Agent bukan bot, server akan mengirimkan respons HTTP dengan header Location, sehingga browser pengguna akan langsung dialihkan (redirect) ke alamat tujuan yang sebenarnya.
+
+Singkatnya
+Bot media sosial (Facebook, WhatsApp, Telegram, Discord, X, dll.) → Melihat judul, deskripsi, dan gambar yang Anda tentukan sebagai pratinjau tautan.
+Pengguna yang mengklik tautan → Tidak melihat halaman tersebut, melainkan langsung diarahkan ke URL tujuan sebenarnya melalui proses redirect.
