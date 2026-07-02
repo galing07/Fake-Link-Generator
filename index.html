@@ -8,24 +8,31 @@
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='bg' gradientUnits='userSpaceOnUse' x1='0%25' y1='0%25' x2='100%25' y2='0%25' gradientTransform='rotate(45)'%3E%3Cstop offset='0%25' stop-color='%23FBDA61' stop-opacity='0'/%3E%3Cstop offset='100%25' stop-color='%23FF5ACD' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23bg)' width='22' height='22' x='1' y='1' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='0.5' rx='1'%3E%3C/rect%3E%3C/svg%3E"
       type="image/svg+xml"
     />
-    <title>Генерация фейковых превью ссылок</title>
-    <meta
-      name="description"
-      content="Сервис фейковых превью ссылок для социальных сетей и мессенджеров"
-    />
-    <meta
-      name="keywords"
-      content="social network,twitter,vk,vkontakte,discord,telegram,fake preview,prank,joke"
-    />
-    <meta property="og:title" content="Генерация фейковых превью ссылок" />
-    <meta property="twitter:title" content="Генерация фейковых превью ссылок" />
-    <meta
-      property="og:description"
-      content="Сервис фейковых превью ссылок для социальных сетей и мессенджеров"
-    />
-    <meta
-      property="twitter:description"
-      content="Сервис фейковых превью ссылок для социальных сетей и мессенджеров"
+    <title>Generator Pratinjau Tautan Palsu</title>
+
+<meta
+  name="description"
+  content="Layanan pembuat pratinjau tautan palsu untuk media sosial dan aplikasi pesan."
+/>
+
+<meta
+  property="og:title"
+  content="Generator Pratinjau Tautan Palsu"
+/>
+
+<meta
+  property="twitter:title"
+  content="Generator Pratinjau Tautan Palsu"
+/>
+
+<meta
+  property="og:description"
+  content="Layanan pembuat pratinjau tautan palsu untuk media sosial dan aplikasi pesan."
+/>
+
+<meta
+  property="twitter:description"
+  content="Layanan pembuat pratinjau tautan palsu untuk media sosial dan aplikasi pesan."
     />
     <meta property="og:url" content="https://link-to.pages.dev/" />
     <meta property="og:type" content="website" />
@@ -41,84 +48,56 @@
   <body>
     <header>
       <h1>Link to</h1>
-      <nav>
-        <a href="#usage">Применение</a>
-        /
-        <a href="#create">Создать такую ссылку</a>
-        /
-        <a href="#preview">Предпросмотр</a>
-      </nav>
-    </header>
-    <section role="main">
-      <h2 id="usage">Применение</h2>
-      <p>
-        Вы можете отправить вашему другу ссылку, якобы ведущую на сайт "Милых
-        котят", но вместо них он получит что-то более интересное
-        <span role="img" aria-label="Подмигивает">😉</span>
-      </p>
-      <p>Круто, правда?</p>
-    </section>
-    <br />
-    <section>
-      <h2 id="create">Создать такую ссылку</h2>
-      <form>
-        <p>
-          <label for="title">Заголовок</label>
-          <br />
-          <input
-            required
-            id="title"
-            type="text"
-            name="title"
-            autocomplete="off"
-            minlength="1"
-            maxlength="70"
-          />
-        </p>
-        <p>
-          <label for="description">Описание</label>
-          <br />
-          <input
-            required
-            id="description"
-            type="text"
-            name="description"
-            autocomplete="off"
-            minlength="1"
-            maxlength="150"
-          />
-        </p>
-        <p>
-          <label for="image">Картинка</label>
-          <br />
-          <input
-            required
-            id="image"
-            type="text"
-            name="image"
-            autocomplete="off"
-          />
-        </p>
-        <p>
-          <label for="redirect">Куда будет происходить переход</label>
-          <br />
-          <input
-            required
-            id="redirect"
-            type="text"
-            name="redirect"
-            autocomplete="off"
-          />
-        </p>
-        <p>
-          <button type="button">Создать</button>
-          <button type="reset">Сбросить форму</button>
-        </p>
-      </form>
-      <div id="output"></div>
-    </section>
-    <section>
-      <h2 id="preview">Предпросмотр</h2>
+  <nav>
+    <a href="#usage">Penggunaan</a> /
+    <a href="#create">Buat Tautan</a> /
+    <a href="#preview">Pratinjau</a>
+  </nav>
+</header>
+
+<section role="main">
+  <h2 id="usage">Penggunaan</h2>
+  <p>
+    Anda dapat mengirimkan tautan kepada teman yang terlihat mengarah ke situs
+    "Anak Kucing Lucu", tetapi saat dibuka mereka akan diarahkan ke sesuatu yang
+    lebih menarik 😉
+  </p>
+  <p>Keren, bukan?</p>
+</section>
+
+<section>
+  <h2 id="create">Buat Tautan</h2>
+
+  <form>
+    <p>
+      <label for="title">Judul</label><br />
+      <input ... />
+    </p>
+
+    <p>
+      <label for="description">Deskripsi</label><br />
+      <input ... />
+    </p>
+
+    <p>
+      <label for="image">Gambar</label><br />
+      <input ... />
+    </p>
+
+    <p>
+      <label for="redirect">URL Tujuan Redirect</label><br />
+      <input ... />
+    </p>
+
+    <p>
+      <button type="button">Buat</button>
+      <button type="reset">Reset Formulir</button>
+    </p>
+  </form>
+</section>
+
+<section>
+  <h2 id="preview">Pratinjau</h2>
       <div class="metaInfo">
         <div class="previews">
           <article class="twitter">
